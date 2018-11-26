@@ -5,6 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   # Validations
+  validates :name, presence: true
 
   # Associations
   has_many :user_places
