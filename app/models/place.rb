@@ -1,0 +1,8 @@
+class Place < ApplicationRecord
+  # Validations
+  validates :country, presence: true
+  validates :language, presence: true
+
+  # Associations
+  has_many :user_places
+end
