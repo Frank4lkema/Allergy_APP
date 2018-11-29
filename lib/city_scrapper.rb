@@ -6,17 +6,17 @@ class CityScrapper
     create_place(countries)
   end
 
-  def fetch_api
+  def self.fetch_api
     url = 'https://restcountries.eu/rest/v2/'
     raw_data = open(url).read
     JSON.parse(raw_data)
   end
 
-  def create_maps(json_data)
+  def self.create_maps(json_data)
     countries = []
     json_data.each do |country|
       country = {
-        name: country["name"],
+        country: country["name"],
         language: country["languages"].first["name"],
         language_code: country["languages"].first["iso639_1"]
       }
@@ -25,7 +25,7 @@ class CityScrapper
     return countries
   end
 
-  def create_place(places)
+  def self.create_place(places)
     places.each do |place|
       Place.create!(place)
     end
