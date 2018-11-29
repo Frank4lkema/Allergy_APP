@@ -1,10 +1,18 @@
 require 'open-uri'
 class CityScrapper
   def self.all_countries
+    json_data = fetch_api
+    countries = create_maps(json_data)
+    create_place(countries)
+  end
+
+  def fetch_api
     url = 'https://restcountries.eu/rest/v2/'
     raw_data = open(url).read
-    json_data = JSON.parse(raw_data)
-    json_data.first
+    JSON.parse(raw_data)
+  end
+
+  def create_maps(json_data)
     countries = []
     json_data.each do |country|
       country = {
@@ -14,6 +22,12 @@ class CityScrapper
       }
       countries << country
     end
-    binding.pry
+    return countries
+  end
+
+  def create_place(places)
+    places.each do |place|
+      Place.create!(place)
+    end
   end
 end
