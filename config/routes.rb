@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   get "search", to: "users#search", as: :search
   resources :user_places, only: [:create]
+  resources :allergies, only: [:index]
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
 end
