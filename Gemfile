@@ -17,6 +17,10 @@ gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
 
+
+# search gem
+gem 'searchkick', '~> 3.0'
+
 group :development do
   gem 'web-console', '>= 3.3.0'
 end
