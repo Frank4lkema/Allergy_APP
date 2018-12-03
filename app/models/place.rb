@@ -8,4 +8,9 @@ class Place < ApplicationRecord
 
   # Associations
   has_many :user_places
+
+
+  def self.search(country)
+    Place.search(country)
+  end
 end

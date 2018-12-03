@@ -6,15 +6,16 @@
 
 
   <h3>make a search bar here</h3>
+  <%= form_tag(user_places_path) do %>
+  Store <%= text_field_tag :store %>
+  <%= submit_tag 'Search' %>
+<% end %>
+
+
+
 </div>
 
 
-
-
-
-<%= simple_form_for(@things) do |f| %>
-
-<% end %>
 
 
 
