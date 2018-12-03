@@ -9,8 +9,8 @@ class Place < ApplicationRecord
   # Associations
   has_many :user_places
 
-
-  def self.search(country)
-    Place.search(country)
+  def self.search_place(country)
+    result = Place.search(country).response["hits"]["hits"][0]["_id"].to_i
+    Place.find(result)
   end
 end
