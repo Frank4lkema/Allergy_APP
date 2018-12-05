@@ -1,15 +1,12 @@
 require 'open-uri'
 class CityScrapper
   def self.all_countries
-    json_data = fetch_api
-    countries = create_maps(json_data)
-    create_place(countries)
+    create_place(create_maps(fetch_api))
   end
 
   def self.fetch_api
     url = 'https://restcountries.eu/rest/v2/'
-    raw_data = open(url).read
-    JSON.parse(raw_data)
+    JSON.parse(open(url).read)
   end
 
   def self.create_maps(json_data)
@@ -22,7 +19,7 @@ class CityScrapper
       }
       countries << country
     end
-    return countries
+    countries
   end
 
   def self.create_place(places)
