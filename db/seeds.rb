@@ -1,12 +1,89 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+UserAllergy.destroy_all
+Allergy.destroy_all
+
+
 puts "this works"
-allergies = ["Lijnzaad","Sesamzaad","Perzik","Banaan","Avocado","Kiwi","Passievrucht","Selderij","Knoflook","Mosterdzaden","Anijszaad","Kamille","Vis","Schelpdieren","Koemelk","Tarwe","Soja","Pinda’s","Boomnoten", "Eieren"]
+allergies =
+["Abalone",
+"Acerola",
+"Alaska Pollock",
+"Almond",
+"Aniseed",
+"Apple",
+"Apricot",
+"Avocado",
+"Banana",
+"Barley",
+"Bell pepper",
+"Brazil nut",
+"Buckwheat",
+"Cabbage",
+"Camomile",
+"Carp",
+"Carrot",
+"Castor",
+"Celery",
+"Celeriac",
+"Cherry",
+"Chestnut",
+"Chickpea",
+"Cocoa",
+"Coconut",
+"Cod",
+"Cotton seed",
+"Zucchini",
+"Crab",
+"Date",
+"Egg",
+"Fig",
+"Fish",
+"Flax seed",
+"Frog",
+"Garden plum",
+"Garlic",
+"Grape",
+"Hazelnut",
+"Kiwi fruit",
+"Lentil",
+"Lettuce",
+"Lobster",
+"Lupin",
+"Lychee",
+"Mackerel",
+"Maize",
+"Mango",
+"Melon",
+"Milk",
+"Mustard",
+"Oat",
+"Oyster",
+"Peach",
+"Peanut",
+"Pear",
+"Pecan",
+"Persimmon",
+"Pine nuts",
+"Pineapple",
+"Pomegranate",
+"Poppy seed",
+"Potato",
+"Pumpkin",
+"Rice",
+"Rye",
+"Salmon",
+"Sesame",
+"Shrimp",
+"Snail",
+"Soybean",
+"Squid",
+"Strawberry",
+"Sunflower seed",
+"Tomato",
+"Tuna",
+"Turnip",
+"Walnut",
+"Wheat"]
+
 
 puts "this works aswell"
 allergies.each do |allergy|
