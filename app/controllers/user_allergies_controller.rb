@@ -11,3 +11,5 @@ class UserAllergiesController < ApplicationController
     end
   end
 end
+
+
