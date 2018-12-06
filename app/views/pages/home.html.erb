@@ -1,15 +1,23 @@
-<h1>Welcome to this app!</h1>
+<div class="banner">
+
+  <h1>Welcome to this app!</h1>
+
+</div>
+
+
+
 
 
 
 <div>
 
 
-  <h3>make a search bar here</h3>
-  <%= form_tag(user_places_path) do %>
-  Country <%= text_field_tag :country %>
-  <%= submit_tag 'Create' %>
-<% end %>
+  <div class="search-bar">
+    <%= form_tag(user_places_path) do %>
+    <%= text_field_tag :country %>
+    <%= submit_tag 'Search', class: "search-button" %>
+    <% end %>
+  </div>
 
 
 
@@ -25,7 +33,14 @@
 
 
 
-<div>
+<div class = "footer">
 
-  <h3>Keep track of older cities</h3>
+  <h3>Last selected locations</h3>
+  <div class="inline-places">
+    <% current_user.user_places.last(3).each do |place| %>
+    <div class="last-place">
+      <%= place.place.country %>
+    </div>
+    <% end %>
+  </div>
 </div>
