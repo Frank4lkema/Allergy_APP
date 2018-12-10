@@ -1,0 +1,16 @@
+.footer{
+ height: 25vh;
+ text-align: center;
+ color: #ADADAD;
+}
+
+.inline-places{
+  display:flex;
+  justify-content: space-around;
+}
+
+.last-place{
+  // border: 1px solid black;
+  padding: 10px;
+  background-color: #F5F3F3;
+}
