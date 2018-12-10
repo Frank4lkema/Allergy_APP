@@ -1,6 +1,6 @@
 class TranslatedAllergiesController < ApplicationController
   def new
-    @translated_allergy = TranslatedAllergy.translate(current_user)
+    @translated_allergy = TranslatedAllergy.translate(params)
     if @translated_allergy.save!
       redirect_to translated_allergy_path(@translated_allergy)
     else

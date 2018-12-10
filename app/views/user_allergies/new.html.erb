@@ -1,0 +1,12 @@
+
+
+<h1> THis works</h1>
+
+<%= form_tag(user_place_user_allergies_path(@user_place)) do %>
+  Allergy <%= text_field_tag :allergy %>
+  <%= submit_tag 'Create' %>
+<% end %>
+
+<% @allergies.each do |allergy| %>
+  <p><%= allergy.name %></p>
+<% end %>

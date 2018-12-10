@@ -6,7 +6,7 @@ class UserPlacesController < ApplicationController
     @user_place.user_id = current_user.id
 
     if @user_place.save
-      redirect_to allergies_path
+      redirect_to new_user_place_user_allergy_path(@user_place)
     else
       render root_path
     end
