@@ -10,7 +10,7 @@ class TranslatedAllergy < ApplicationRecord
     user_place = UserPlace.find(current_user[:user_place_id])
     language_code = user_place.place.language_code
     allergy = user_allergy.allergy.name
-    result = get_data(language_code,allergy)
+    result = get_data(language_code, allergy)
     country = user_place.place.language
     allergy_id = user_allergy.allergy.id
     TranslatedAllergy.new(name: result, language: country, allergy_id: allergy_id)
